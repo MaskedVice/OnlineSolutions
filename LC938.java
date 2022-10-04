@@ -33,9 +33,3 @@ class LC938 {
         iOT(root.right,low,high);
     }
 }
-class TreeNode {
-    int val;
-    TreeNode left;
-    TreeNode right;
-    TreeNode(int x) { val = x; }
-}
