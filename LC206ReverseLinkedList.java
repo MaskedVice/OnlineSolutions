@@ -1,6 +1,6 @@
 public class LC206ReverseLinkedList {
     public static ListNode reverseList(ListNode head) {
-        ListNode cur,prev = null;;
+        ListNode prev = null;;
         while(head!= null)
         {
             ListNode nextNode = head.next;

@@ -1,23 +1,23 @@
 import java.util.ArrayList;
 import java.util.List;
 
-public class LC590N_aryTreePostorderTraversal {
-    public List<Integer> postorder(Node root) {
+public class LC589N_ArrayPreOrderTraversal {
+    public List<Integer> preorder(Node root) {
         List<Integer> ans = new ArrayList<>();
-        nArraypostOrder(root,ans);
+        nArraypreOrder(root,ans);
         return ans;
     }
 
-    private void nArraypostOrder(Node root, List<Integer> ans) {
+    private void nArraypreOrder(Node root, List<Integer> ans) {
         if(root == null) return;
+        
+        ans.add(root.val);
         for(int i = 0 ; i< root.children.size() ; i++)
         {
-            nArraypostOrder(root.children.get(i), ans);
+            nArraypreOrder(root.children.get(i), ans);
         }
-        ans.add(root.val);
     }
 }
-
 class Node {
     public int val;
     public List<Node> children;

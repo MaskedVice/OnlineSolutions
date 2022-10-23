@@ -1,5 +1,3 @@
-import javax.swing.text.html.parser.TagElement;
-
 public class LC112PathSum {
     public static boolean hasPathSum(TreeNode root, int targetSum) {
         if (root == null || targetSum<0)
