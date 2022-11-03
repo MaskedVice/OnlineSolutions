@@ -1,6 +1,3 @@
-import java.util.ArrayList;
-import java.util.List;
-
 public class LC997 {
 
     //check indegree-outdegree for judge edge = N-1

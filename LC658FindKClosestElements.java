@@ -1,4 +1,5 @@
-import java.util.*;
+import java.util.List;
+import java.util.ArrayList;
 
 class LC658FindKClosestElements {
     public static List<Integer> findClosestElements(int[] arr, int k, int x) {
