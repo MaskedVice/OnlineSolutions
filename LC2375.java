@@ -6,7 +6,6 @@ public class LC2375 {
     }
     public boolean finished = false;
     public String smallestNumber(String pattern) {
-        int length = pattern.length();
         int[] a = new int[pattern.length()+2];
         String[]s = new String[1];
         BackTrack(a,0,pattern.length()+1,s,pattern);
