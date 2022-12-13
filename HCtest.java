@@ -1,7 +1,3 @@
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.List;
-
 public class HCtest {
     public static int getAnagram(String s) {
         String s1 = s.substring(0,s.length()/2);

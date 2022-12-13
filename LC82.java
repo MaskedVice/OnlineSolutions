@@ -3,8 +3,6 @@ public class LC82 {
         ListNode a = head;
         while(a!= null)
         {
-            int val = a.val;
-            
             if(a.val == a.next.val)
             {
                 a = a.next.next;

@@ -1,9 +1,3 @@
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.List;
-import java.util.function.Supplier;
-import java.util.stream.Collectors;
-
 public class LC2423 {
     public boolean equalFrequency(String word) {
         int[] data = new int[26];

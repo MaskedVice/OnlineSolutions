@@ -1,6 +1,3 @@
-import java.util.HashSet;
-import java.util.*;
-
 public class LC2443 {
     public boolean sumOfNumberAndReverse(int num) 
     {
