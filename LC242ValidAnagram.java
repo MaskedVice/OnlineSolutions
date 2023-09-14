@@ -1,4 +1,7 @@
+import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.Set;
+import java.util.stream.Collectors;
 
 class LC242ValidAnagram {
     public boolean isAnagram(String s, String t) {
@@ -13,5 +16,9 @@ class LC242ValidAnagram {
                 return false;
         }
         return true;
+    }
+    public static void main(String[] args) {
+        LC242ValidAnagram a = new LC242ValidAnagram();
+        System.out.println(a.isAnagram("anagram","nagaram"));
     }
 }
