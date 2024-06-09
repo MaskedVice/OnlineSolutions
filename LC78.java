@@ -43,7 +43,7 @@ public class LC78 {
     }
 
     private void processSolution(boolean[] a, int k, int length, int[] nums, List<List<Integer>> res) {
-        List<Integer> t = new ArrayList();
+        List<Integer> t = new ArrayList<>();
         for (int i = 1; i <= length; i++) {
             if(a[i])
             {

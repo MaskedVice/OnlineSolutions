@@ -1,8 +1,6 @@
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
-import java.util.Scanner;
-import java.util.stream.Stream;
 
 public class HR_XORStrings {
     public static String stringsXOR(String s, String t) {

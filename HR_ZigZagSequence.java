@@ -1,5 +1,4 @@
 import java.util.Arrays;
-import java.util.Scanner;
 
 public class HR_ZigZagSequence {
     public static void main(String[] args) throws java.lang.Exception {

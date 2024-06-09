@@ -1,6 +1,3 @@
-import java.util.Arrays;
-import java.util.stream.IntStream;
-
 public class LC238 {
     public int[] productExceptSelf(int[] nums) {
         int n = nums.length;
@@ -31,6 +28,6 @@ public class LC238 {
     public static void main(String[] args) {
         int[] nums = new int[] { -1, 1, 0, -3, 3 };
         LC238 lc238 = new LC238();
-        int[] ans = lc238.productExceptSelf(nums);
+        lc238.productExceptSelf(nums);
     }
 }

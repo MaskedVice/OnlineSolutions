@@ -10,7 +10,7 @@ public class LC46 {
     public List<List<Integer>> permute(int[] nums) {
         int n = nums.length;
         int[] a = new int [n+1];
-        List<List<Integer>> perms = new ArrayList();
+        List<List<Integer>> perms = new ArrayList<>();
         BackTrack(a,0,n,nums,perms);
         return perms;
     }
@@ -19,7 +19,7 @@ public class LC46 {
         int[] c = new int [n+1];
         int nc[] = new int[1];
         if(k==n){
-            List<Integer> t = new ArrayList();
+            List<Integer> t = new ArrayList<>();
             for (int i = 1; i <= n; i++) {
                 t.add(nums[a[i]-1]);                
             }

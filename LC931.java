@@ -73,6 +73,6 @@ public class LC931 {
 
 
     public static void main(String[] args) {
-        int ans = new LC931().minFallingPathSum(new int [][]{{2,1,3},{6,5,4},{7,8,9}});
+        new LC931().minFallingPathSum(new int [][]{{2,1,3},{6,5,4},{7,8,9}});
     }
 }

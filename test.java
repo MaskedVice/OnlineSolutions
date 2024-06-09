@@ -1,41 +1,39 @@
+import java.io.BufferedReader;
+import java.io.FileInputStream;
+import java.io.IOException;
+import java.io.InputStreamReader;
 import java.util.ArrayList;
-import java.util.List;
 import java.util.Arrays;
-import java.util.Collections;
+import java.util.List;
+import java.util.zip.GZIPInputStream;
 
 public class test {
-    public static ArrayList<Integer> getStaleServerCount(int n, int[][] logData, List<Integer> queries, int x) {
-        ArrayList<Integer>[] serverTimestamp = new ArrayList[n + 1];
-        for (int i = 1; i <= n; i++) {
-            serverTimestamp[i] = new ArrayList<>();
-        }
-        for (int[] log : logData) {
-            serverTimestamp[log[1]].add(log[0]);
-        }
-        ArrayList<Integer> result = new ArrayList<>();
-        for (Integer q : queries) {
-            int end = q;
-            int start = q-x;
+    private static void readAndUnzipFile(String gzippedFilePath) throws IOException {
+        try (FileInputStream fis = new FileInputStream(gzippedFilePath);
+             GZIPInputStream gzis = new GZIPInputStream(fis);
+             InputStreamReader isr = new InputStreamReader(gzis);
+             BufferedReader br = new BufferedReader(isr)) {
             int count = 0;
-            for (int i = start; i <= end; i++) {
-                if(serverTimestamp[i] !=null){
-                    count+=serverTimestamp[i].size();
+            String line;
+            while ((line = br.readLine()) != null) {
+                if(line.contains("NSE_EQ")){
+                    System.out.println(line.split(",")[0]);
+                    count++;
                 }
             }
-            result.add(n-count);
+            System.out.println(count);
         }
-        return result;
     }
 
     public static void main(String[] args) {
-        int n = 6;
-        int x = 2;
-        int q = 3;
-        int[][] logData = {{3, 2},{4,3}, {2, 6}, {6, 3}};
-        List<Integer> queries =   Arrays.asList(new Integer[] {3,2,6});
+        String path = "C:\\Users\\snghj\\Downloads\\NSE.csv.gz";
+        try {
+            readAndUnzipFile(path);
+        } catch (IOException e) {
+            // TODO Auto-generated catch block
+            e.printStackTrace();
+        }
 
-        ArrayList<Integer> result = getStaleServerCount(n, logData,queries, x);
-        result.stream().forEach(System.out::println);
     }
 
 }

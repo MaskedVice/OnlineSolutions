@@ -12,7 +12,7 @@ public class LC797 {
         int source = 0;
         int target = graph.length-1;
         int[] a = new int[graph.length+1];
-        List<List<Integer>> paths = new ArrayList();
+        List<List<Integer>> paths = new ArrayList<>();
         GraphData g = new GraphData(source, target, graph, paths);
         BacktrachGrapthPaths(a,0,graph.length,g);
         for (List<Integer> list : paths) {
