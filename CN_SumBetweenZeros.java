@@ -41,7 +41,6 @@ public class CN_SumBetweenZeros {
         head.next.next.next.next.next.next.next = new LinkedListNode<>(0);
         head.next.next.next.next.next.next.next.next = new LinkedListNode<>(6);
         head.next.next.next.next.next.next.next.next.next = new LinkedListNode<>(0);
-        LinkedListNode<Integer> res = sumBetweenZeros(head);
     }
 }
 
