@@ -1,26 +1,32 @@
+/**
+ * LC69Sqrt
+ */
 public class LC69Sqrt {
     public int mySqrt(int x) {
-        float l = 1,r = x;
-        while(l<=r){
-            float mid = (r + l)/2;
-            float sqr = mid * mid;
-            if(sqr == x ){
-                return (int)mid;
+        if(x<=1) return x;
+        double start = 0;
+        double end = x;
+        double mid = 0,sqr = 0;
+        
+        while(end>start){
+            mid = (start + end)/2;
+            sqr = x/mid;
+            if( (int) sqr == (int) mid){
+                return (int) (sqr > mid ? sqr : mid);
             }
-            else if(sqr < x){
-                l = mid;
+            else if(sqr > mid){
+                start = mid;
             }
             else{
-                r = mid;
+                end = mid;
             }
         }
-        return -1;
+        return (int) mid;
     }
+    
 
     public static void main(String[] args) {
         LC69Sqrt obj = new LC69Sqrt();
-        int x = 64;
-        int ans = obj.mySqrt(x);
-        System.out.println(ans);
+        System.out.println(obj.mySqrt(36));
     }
 }

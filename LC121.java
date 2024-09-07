@@ -11,10 +11,10 @@ public class LC121 {
     }
 
     public static void main(String[] args) {
-
         LC121 obj = new LC121();
         int[] prices = {7,6,4,3,1}; 
 
         System.out.println(obj.maxProfit(prices));
+
     }
 }

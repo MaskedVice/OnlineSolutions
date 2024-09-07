@@ -2,17 +2,18 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class LC94Inorder {
-    List<Integer>  ans = new ArrayList<>();
+
     public List<Integer> inorderTraversal(TreeNode root) {
         if(root ==null)return new ArrayList<>();
-        iot(root);
+        List<Integer>  ans = new ArrayList<>();
+        iot(root,ans);
         return ans;
     }
-    private  void iot(TreeNode root) {
-        if(root==null) return;
-        iot(root.left);
+    private void iot(TreeNode root,List<Integer> ans){
+        if(root == null) return;
+        iot(root.left, ans);
         ans.add(root.val);
-        iot(root.right);
+        iot(root.right, ans);
     }
     public static void main(String[] args) {
         TreeNode h = new TreeNode(1);

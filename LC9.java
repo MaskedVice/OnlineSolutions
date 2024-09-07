@@ -2,18 +2,14 @@ import java.util.ArrayList;
 
 public class LC9 {
     public boolean isPalindrome(int x) {
-        if(x<0)return false;
-        ArrayList<Integer> s = new ArrayList<>();
-        while(x>0)
-        {
-            s.add(x%10);
-            x/=10;
-        }
-        int l = 0 , r = s.size()-1;
-        while(l<r )
-        {
-            if(s.get(l) != s.get(r)) return false;
+        if(x < 0) return false;
 
+        String xx = String.valueOf(x);
+        int l = 0 , r = xx.length()-1;
+
+        while(l<r){
+            if(xx.charAt(l) != xx.charAt(r))
+                return false;
             l++;r--;
         }
         return true;
@@ -21,6 +17,6 @@ public class LC9 {
 
     public static void main(String[] args) {
         LC9 a = new LC9();
-        a.isPalindrome(567898765);
+        a.isPalindrome(10);
     }
 }
