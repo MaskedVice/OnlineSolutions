@@ -1,11 +1,9 @@
 import java.util.ArrayList;
-import java.util.Arrays;
 
 public class CN_PairSumInBST {
     public static ArrayList<ArrayList<Integer>> printNodesSumToS(TreeNode root, int s) {
         // Write your code here
         ArrayList<ArrayList<Integer>> res = new ArrayList<>();
-        ArrayList<Integer> cur = new ArrayList<>();
         
         return res;
     }
